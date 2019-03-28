@@ -3,7 +3,6 @@
 *_mask.c
 .DS_Store
 *.png
-!demo/assets/*.png
 *.swp
 *.txt*
 !tools/*.txt
