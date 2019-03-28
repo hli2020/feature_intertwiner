@@ -1,0 +1,26 @@
+TRAIN:
+  LR_WARM_UP: False
+  CLIP_GRAD: True
+  END2END: False
+  BATCH_SIZE: 8  # 8gpu
+  DO_VALIDATION: True
+DEV:
+  SWITCH: True
+  BUFFER_SIZE: 1  # use all history
+  LOSS_CHOICE: 'ot'
+  OT_ONE_DIM_FORM: 'conv'
+  LOSS_FAC: 1000.
+  ASSIGN_BOX_ON_ALL_SCALE: False
+  BIG_SUPERVISE: False
+  BIG_FC_INIT: 'coco_pretrain'
+  MULTI_UPSAMPLER: False
+ROIS:
+  ASSIGN_ANCHOR_BASE: 224.  # default
+MODEL:
+  INIT_FILE_CHOICE: 'coco_pretrain'
+CTRL:
+  QUICK_VERIFY: False
+MISC:
+  USE_VISDOM: True
+  VIS:
+    PORT: 2197
