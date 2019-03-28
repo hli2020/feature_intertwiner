@@ -2,10 +2,8 @@
 *local_pc*/
 *_mask.c
 .DS_Store
-*.png
 *.swp
 *.txt*
-!tools/*.txt
 datasets/coco
 .idea/
 *.pth
