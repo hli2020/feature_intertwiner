@@ -39,16 +39,20 @@ Here comes the proposed feature intertwiner:
 Follow instructions in [`INSTALL.md`](INSTALL.md) to 
 set up datasets, symlinks, compilation, etc.
 
-#####To train
+##### To train
 ```bash
 sh script/base_4gpu    105/meta_105_quick_1   0,2,5,7   # gpu ids
 ```
 or execute `python main.py`. The configurations are stored 
 in the `configs` folder.
 
-#####To test
+##### To test
 
-Change the flag `--phase` in `main.py` to `inference`.  
+Change the flag `--phase` in `main.py` to `inference`. 
+
+##### Performance
+
+TODO.
 
 ### Adapting Feature Intertwiner to your own task
 
