@@ -30,7 +30,7 @@ reliable set (blue).
 Here comes the proposed feature intertwiner:
 
 
-<img src="assets/intertwiner.png" width="800">
+<img src="assets/intertwiner.png" width="600">
 
 
 - PyTorch `0.3` 
