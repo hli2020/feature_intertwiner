@@ -23,18 +23,14 @@ in (a) below. Due to the inferior up-sampling design in RoI operation, shown in
 (b), the reliable set (green) *could* guide the feature learning of the less
 reliable set (blue).
 
-![](assets/motivation_new.png | width=100)
 
-<img src="assets/motivation_new.png" width="200">
+<img src="assets/motivation_new.png" width="800">
 
 
 Here comes the proposed feature intertwiner:
 
-![](assets/intertwiner.png | width=100)
 
-![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png =250x250)
-
-<img src="https://cloud.githubusercontent.com/assets/yourgif.gif" width="400" height="790">
+<img src="assets/intertwiner.png" width="800">
 
 
 - PyTorch `0.3` 
@@ -46,24 +42,36 @@ Here comes the proposed feature intertwiner:
 Follow instructions in [`INSTALL.md`](INSTALL.md) to 
 set up datasets, symlinks, compilation, etc.
 
-##### To train
-```bash
+To **train**,
+`
 sh script/base_4gpu    105/meta_105_quick_1   0,2,5,7   # gpu ids
-```
-or execute `python main.py`. The configurations are stored 
+`
+or:  
+
+simply execute `python main.py`. The configurations are stored 
 in the `configs` folder.
 
-##### To test
+To **test**,
+change the flag `--phase` in `main.py` to `inference`. 
 
-Change the flag `--phase` in `main.py` to `inference`. 
+### Performance
 
-##### Performance
+Object detection single-model performance (bounding box AP) on the COCO `test-dev`.
+The InterNet `multi-scale` is achieved with data augmentation, 1.5× longer training time and multi-scale
+training. Our InterNet is also a two-stage detector.
 
-TODO.
+| methods    | backbone           | AP  | AP_50 | AP_75 | AP_small|  AP_medium | AP_large| 
+| :-----: | :-----: | :-----:| :----: |:----:| :----:|:----:| :----:|
+| YOLOv2     | DarkNet-19  | 21.6  | 44.0 | 19.2 | 5.0 | 22.4 | 35.5 |
+| SSD513     | ResNet-101-SSD | 31.2 | 50.4 | 33.3 | 10.2 | 34.5 | 49.8 |
+| R-FCN     | ResNet-101 | 29.9 | 51.9 | - | 10.8 | 32.8 | 45.0 |
+| Mask-RCNN     | ResNet-101-FPN | 38.2 | 60.3 | 41.7 | 20.1 | 41.1 | 50.2 |
+| InterNet     | ResNet-101-FPN | 42.5 | 65.1 | 49.4 | 25.4 | 46.6 | 54.3 |
+| InterNet `multi-scale`    | ResNet-101-FPN | 44.2 | 67.5 | 51.1 | 27.2 | 50.3 | 57.7 |
 
 ### Adapting Feature Intertwiner to your own task
 
-TODO.
+This is probably the most concerned part for most audience.
 
 ### Citation
 Please cite in the following manner if you find it useful in your research:
