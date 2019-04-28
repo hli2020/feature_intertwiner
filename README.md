@@ -66,7 +66,7 @@ training. Our InterNet is also a two-stage detector.
 | SSD513     | ResNet-101-SSD | 31.2 | 50.4 | 33.3 | 10.2 | 34.5 | 49.8 |
 | R-FCN     | ResNet-101 | 29.9 | 51.9 | - | 10.8 | 32.8 | 45.0 |
 | Mask-RCNN     | ResNet-101-FPN | 38.2 | 60.3 | 41.7 | 20.1 | 41.1 | 50.2 |
-| InterNet     | ResNet-101-FPN | 42.5 | 65.1 | 49.4 | 25.4 | 46.6 | 54.3 |
+| InterNet     | ResNet-101-FPN | **42.5** | **65.1** | **49.4** | 25.4 | 46.6 | 54.3 |
 | InterNet `multi-scale`    | ResNet-101-FPN | 44.2 | 67.5 | 51.1 | 27.2 | 50.3 | 57.7 |
 
 ### Adapting Feature Intertwiner to your own task
