@@ -5,29 +5,36 @@ A PyTorch implementation of our paper published at ICLR 2019.
 
 By [Hongyang Li](http://www.ee.cuhk.edu.hk/~yangli/), 
 [Bo Dai](http://daibo.info/),
-Shaoshuai Shi, 
+[Shaoshuai Shi](https://scholar.google.com.hk/citations?user=DC9wzBgAAAAJ&hl=en), 
 Wanli Ouyang, and Xiaogang Wang.
 
-[[arXiv]]()
+**Paper:** 
+[[arXiv]](https://arxiv.org/abs/1903.11851)
 [[Openreview]](https://openreview.net/forum?id=SyxZJn05YX) 
-[[Poster]]()
 
-[[Slides]](https://docs.google.com/presentation/d/12Syg5OXD6nGwtG_nwmoQ4kqX5GtJ-5pJ1OuVY53FqB0/edit?usp=sharing) (a 50-min talk presented at GTC 2019)
-
+**A 50-min talk** presented at GTC 2019:
+[[GTC Video]](https://on-demand.gputechconf.com/gtc/2019/video/_/S9551/) 
+[[GTC Slides]](https://docs.google.com/presentation/d/12Syg5OXD6nGwtG_nwmoQ4kqX5GtJ-5pJ1OuVY53FqB0/edit?usp=sharing)
 
 ### Overview
 
 Our assumption is that semantic features for one category should be the same as shown
-in (a). Due to the inferior up-sampling design in RoI operation, shown in 
-(b), the reliable set (green) could guide the feature learning of the less
+in (a) below. Due to the inferior up-sampling design in RoI operation, shown in 
+(b), the reliable set (green) *could* guide the feature learning of the less
 reliable set (blue).
 
-![alt text](assets/motivation_new.png "")
+![](assets/motivation_new.png | width=100)
+
+<img src="assets/motivation_new.png" width="200">
 
 
 Here comes the proposed feature intertwiner:
 
-![alt text](assets/intertwiner.png "")
+![](assets/intertwiner.png | width=100)
+
+![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png =250x250)
+
+<img src="https://cloud.githubusercontent.com/assets/yourgif.gif" width="400" height="790">
 
 
 - PyTorch `0.3` 
